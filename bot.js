@@ -40,8 +40,6 @@ bot.onText(emailRegex, msg => {
   const email = potentialEmail
   const url = gravtar.url(email, { protocol: 'https', size: '2048', d: '404' })
 
-  bot.sendMessage(chatId, 'Please wait...')
-
   getBufferFromUrl(url)
     .then(buffer => {
       bot.sendPhoto(chatId, buffer, { caption: url })
