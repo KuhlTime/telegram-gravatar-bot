@@ -1,0 +1,28 @@
+{
+  "name": "telegram-pdf-bot",
+  "version": "1.0.0",
+  "description": "A telegram bot to modify pdfs",
+  "main": "bot.js",
+  "engines": {
+    "node": ">=14"
+  },
+  "scripts": {
+    "start": "node bot.js",
+    "dev": "nodemon bot.js"
+  },
+  "author": "André Kuhlmann <akuhltime@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@sentry/node": "^6.3.1",
+    "@sentry/tracing": "^6.3.1",
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
+    "gravatar": "^1.8.1",
+    "joi": "^17.4.0",
+    "node-telegram-bot-api": "^0.52.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "prettier": "^2.2.1"
+  }
+}
