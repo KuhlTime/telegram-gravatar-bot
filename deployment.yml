@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: telegram-garavatar-bot-deployment
+  labels:
+    app: telegram-garavatar-bot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: telegram-garavatar-bot
+  template:
+    metadata:
+      labels:
+        app: telegram-garavatar-bot
+    spec:
+      containers:
+        - name: telegram-garavatar-bot
+          image: ghcr.io/kuhltime/telegram-gravatar-bot:main
+          imagePullPolicy: Always
+          env:
+            - name: NODE_ENV
+              value: production
+            - name: TELEGRAM_BOT_TOKEN
+              value:
+            - name: SENTRY_DSN
+              value:

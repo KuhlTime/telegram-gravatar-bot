@@ -4,3 +4,11 @@
 
 This is a telegram bot that sends back gravatar profile pictures for the provided email address.
 
+## Kubernetes
+
+In order to deploy this project to Kubernetes you need to run the following command. 
+Please make sure to fill in the environment variables inside the `deployment.yml` file before you go ahead.
+
+```bash
+kubectl apply -f deployment.yml
+```
