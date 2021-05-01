@@ -6,7 +6,7 @@ const envPath = path.join(__dirname, '../.env')
 dotenv.config({ path: envPath })
 
 const envVarsSchema = Joi.object().keys({
-  NODE_ENV: Joi.string().valid('production', 'development', 'test').required(),
+  NODE_ENV: Joi.string().valid('production', 'development', 'test'),
   TELEGRAM_BOT_TOKEN: Joi.string().required(),
   SENTRY_DSN: Joi.string().uri()
 }).unknown()
@@ -18,7 +18,7 @@ if (error) {
 }
 
 module.exports = {
-  nodeEnv: envVars.NODE_ENV,
+  nodeEnv: envVars.NODE_ENV ?? 'production',
   telegramBotToken: envVars.TELEGRAM_BOT_TOKEN,
   sentryDsn: envVars.SENTRY_DSN
 }
