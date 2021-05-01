@@ -4,7 +4,18 @@
 
 This is a telegram bot that sends back gravatar profile pictures for the provided email address.
 
-## Kubernetes
+## 🌈 Setup
+
+### ⛴ Docker
+
+```bash
+docker run --name telegram-gravatar-bot\
+  -e TELEGRAM_BOT_TOKEN=""\
+  -e SENTRY_DSN=""\ # Optional
+  ghcr.io/kuhltime/telegram-gravatar-bot:main
+```
+
+### ⚛️ Kubernetes
 
 In order to deploy this project to Kubernetes you need to run the following command. 
 Please make sure to fill in the environment variables inside the `deployment.yml` file before you go ahead.
