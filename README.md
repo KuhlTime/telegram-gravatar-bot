@@ -9,7 +9,8 @@ This is a telegram bot that sends back gravatar profile pictures for the provide
 ### ⛴ Docker
 
 ```bash
-docker run --name telegram-gravatar-bot\
+docker run\ 
+  --name telegram-gravatar-bot\
   -e TELEGRAM_BOT_TOKEN=""\
   -e SENTRY_DSN=""\ # Optional
   ghcr.io/kuhltime/telegram-gravatar-bot:main
