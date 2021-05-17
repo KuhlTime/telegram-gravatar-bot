@@ -27,6 +27,8 @@ bot.onText(emailRegex, msg => {
   const chatId = msg.chat.id
   const potentialEmail = msg.text
 
+  console.log(`${Date.now()}: Fetch new image`)
+
   if (!potentialEmail) {
     bot.sendMessage(chatId, 'Unable to process send data.')
     return
