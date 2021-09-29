@@ -19,7 +19,7 @@
     "dotenv": "^10.0.0",
     "gravatar": "^1.8.2",
     "joi": "^17.4.2",
-    "node-telegram-bot-api": "^0.52.0"
+    "node-telegram-bot-api": "^0.54.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.13",
